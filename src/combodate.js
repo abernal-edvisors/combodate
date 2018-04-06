@@ -156,7 +156,8 @@
                 var header = typeof relTime[key] === 'function' ? relTime[key](1, true, key, false) : relTime[key];
                 //take last entry (see momentjs lang files structure)
                 header = header.split(' ').reverse()[0];
-                values.push(['', header]);
+                // values.push(['', header]);
+                values.push(['', header.charAt(0).toUpperCase() + header.slice(1)]);
             } else if(this.options.firstItem === 'empty') {
                 values.push(['', '']);
             }
